@@ -14,5 +14,26 @@ public class Main {
         service.addUser(user2);
 
         service.listUsers();
+
+        User foundUser = service.findUserById(1L);
+
+        if(foundUser !=null){
+            System.out.println("User found: ");
+            foundUser.displayUser();
+        } else {
+            System.out.println("User not found.");
+        }
+
+        boolean deleted = service.deleteUserById(2L);
+
+        if (deleted) {
+            System.out.println("User deleted successfully!");
+        } else {
+            System.out.println("User not found.");
+        }
+
+        System.out.println("Updated list:");
+        service.listUsers();
+
     }
 }
