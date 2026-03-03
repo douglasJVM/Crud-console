@@ -36,5 +36,13 @@ public class UserService {
         }
         return false;
     }
-
+    public boolean updateUser(Long id, String newName, String newEmail) {
+        User user = findUserById(id);
+        if (user != null) {
+            user.setName(newName);
+            user.setEmail(newEmail);
+            return true;
+        }
+        return false;
+    }
 }
