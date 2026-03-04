@@ -16,6 +16,7 @@ public class Main {
             System.out.println("2 - List Users");
             System.out.println("3 - Find User by ID");
             System.out.println("4 - Delete User");
+            System.out.println("5 - Update User");
             System.out.println("0 - Exit");
             System.out.print("Choose an option: ");
 
@@ -64,6 +65,25 @@ public class Main {
                     boolean deleted = service.deleteUserById(deleteId);
                     if (deleted) {
                         System.out.println("User deleted successfully!");
+                    } else {
+                        System.out.println("User not found.");
+                    }
+                    break;
+
+                case 5:
+                    System.out.println("Enter user ID to update:");
+                    Long updateId = scanner.nextLong();
+                    scanner.nextLine();
+
+                    System.out.println("Enter new name:");
+                    String newName = scanner.nextLine();
+
+                    System.out.println("Enter new email:");
+                    String newEmail = scanner.nextLine();
+
+                    boolean updated = service.updateUser(updateId, newName, newEmail);
+                    if (updated) {
+                        System.out.println("User updated successfully!");
                     } else {
                         System.out.println("User not found.");
                     }
