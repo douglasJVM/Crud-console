@@ -36,8 +36,13 @@ public class Main {
                     System.out.print("Enter Email: ");
                     String email = scanner.nextLine();
 
-                    service.addUser(new User(id, name, email));
-                    System.out.println("User added successfully!");
+                    boolean added = service.addUser(new User(id, name, email));
+
+                    if (added) {
+                        System.out.println("User added successfully!");
+                    } else {
+                        System.out.println("Error: User with this ID already exists.");
+                    }
                     break;
 
                 case 2:
