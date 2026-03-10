@@ -6,13 +6,21 @@ Simple CRUD system built with Java to practice:
 - Separation of responsibilities
 - Collections (ArrayList)
 
-## Next Improvements
-- Add update user functionality
-- Add validation to prevent duplicate IDs
-- Connect to MySQL
+## Features
+
+- Create users
+- List users
+- Find user by ID
+- Update user
+- Delete user
+- Validation to prevent duplicate IDs
+
 
 ## Technologies
-- Java 21
+- Java
+- OOP
+- ArrayList
+- Console interaction
 
 ## Author
 Douglas Jesuino
